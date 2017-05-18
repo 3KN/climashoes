@@ -28,7 +28,6 @@ function signIn() {
 
 			if(event["status"] =="OK"){
 				$.cookie('token', 'event["token"]',{ path: '/' });
-			
 				window.location.href="data.html";
 			}else{
 				alert(event["errorValue"]);
