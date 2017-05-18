@@ -18,13 +18,11 @@ function signIn() {
 		var xhr = new XHR();
 
 		// (2) запрос на другой домен :)
-		xhr.open('GET', 'https://jerseybuzzapp.herokuapp.com/webapi/user/get/admin/admin', true);
+		xhr.open('GET', 'https://jerseybuzzapp.herokuapp.com/webapi/user/get/'+login+'/'+pass, true);
 
 		xhr.onload = function() {
-		  var responseText = this.responseText;
-			
-		  
-		  alert(responseText);
+		  //alert( this.responseText );
+		  window.location.href="data.html";
 		}
 
 		xhr.onerror = function() {
