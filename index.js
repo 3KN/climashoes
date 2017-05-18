@@ -8,6 +8,13 @@ $('.close').on('click', function() {
 
 function signIn() {
 	
-	window.location.href="data.html";
+	
+	$.getJSON("https://jerseybuzzapp.herokuapp.com/webapi/user/get/admin/admin", function(result){
+	   //response data are now in the result variable
+	   alert(result);
+	});
+	
+	
+	//window.location.href="data.html";
 	
 }
