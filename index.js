@@ -48,5 +48,14 @@ function signIn() {
 }
 
 
+	
+	var x = document.cookie;
+	
+	alert("HEllo " + x);
+	
+
+});
+
+
 
 

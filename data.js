@@ -1,7 +1,8 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 	
-
-	alert(document.cookie);
+	var x = document.cookie;
+	
+	alert("HEllo " + x);
 	
 
 });
