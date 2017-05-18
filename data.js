@@ -15,7 +15,7 @@ function signOut(){
 }
 
 
-function getData(var token){
+function getData(token){
 	
 		var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 
