@@ -5,3 +5,9 @@ $('.toggle').on('click', function() {
 $('.close').on('click', function() {
   $('.container').stop().removeClass('active');
 });
+
+function signIn() {
+	
+	window.location.href="data.html";
+	
+}
