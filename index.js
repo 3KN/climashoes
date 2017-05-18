@@ -1,3 +1,5 @@
+
+
 $('.toggle').on('click', function() {
   $('.container').stop().addClass('active');
 });
@@ -9,9 +11,8 @@ $('.close').on('click', function() {
 function signIn() {
 	
 	
-	
-		var login = "admin";
-		var pass ="admin";
+		var login = document.getElementById("login").value;
+		var pass =document.getElementById("pass").value;
 	
 		var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 
@@ -21,8 +22,18 @@ function signIn() {
 		xhr.open('GET', 'https://jerseybuzzapp.herokuapp.com/webapi/user/get/'+login+'/'+pass, true);
 
 		xhr.onload = function() {
-		  //alert( this.responseText );
-		  window.location.href="data.html";
+			var obj = this.responseText;
+			//alert( obj);
+			var event = JSON.parse(obj);
+
+			if(event["status"] =="OK"){
+				document.cookie ="token= "+ event["token"]+'"';
+				//window.location.href="data.html";
+			}else{
+				alert(event["errorValue"]);
+				
+			}
+		  //window.location.href="data.html";
 		}
 
 		xhr.onerror = function() {
@@ -36,5 +47,15 @@ function signIn() {
 	
 }
 
+
+
+$( document ).ready(function() {
+	
+	
+	alert(document.cookie);
+	
+	
+
+});
 
 
