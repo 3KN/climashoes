@@ -1,4 +1,4 @@
-
+var user;
 
 $('.toggle').on('click', function() {
   $('.container').stop().addClass('active');
@@ -47,7 +47,7 @@ function signIn() {
 	
 }
 
-
+$( document ).ready(function() {
 	
 	var x = document.cookie;
 	
