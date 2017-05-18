@@ -27,8 +27,8 @@ function signIn() {
 			var event = JSON.parse(obj);
 
 			if(event["status"] =="OK"){
-				document.cookie ="token= "+ event["token"]+'"';
-				//window.location.href="data.html";
+				document.cookie ="token= "+ event["token"]+ ";path=/";
+				window.location.href="data.html";
 			}else{
 				alert(event["errorValue"]);
 				
@@ -48,14 +48,5 @@ function signIn() {
 }
 
 
-
-$( document ).ready(function() {
-	
-	
-	alert(document.cookie);
-	
-	
-
-});
 
 
