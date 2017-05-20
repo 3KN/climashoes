@@ -61,10 +61,13 @@ function makeLI(jsonArr) {
 	
 	var element = document.getElementById("kekcheb");
  	for (i = 0; i < jsonArr.length; i++) { 
-		
+		var br = document.createElement('br');
 		var li=document.createElement('li');
+		
 		li.innerHTML=li.innerHTML + jsonArr[i]["date"] + " "+ jsonArr[i]["steps"];
+		
 		element.appendChild(li);
+		element.appendChild(br);
 	 
 	}
 
