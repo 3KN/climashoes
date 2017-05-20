@@ -55,8 +55,6 @@ function getSteps(token){
 }
 
 
-
-
 function makeLI(jsonArr) {
 	
 	var element = document.getElementById("kekcheb");
