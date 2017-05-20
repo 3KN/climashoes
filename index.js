@@ -65,7 +65,7 @@ function signUp(){
 		var xhr = new XHR();
 
 		// (2) запрос на другой домен :)
-		xhr.open('POST', 'https://jerseybuzzapp.herokuapp.com/webapi/user/get/'+login+'/'+pass, true);
+		xhr.open('POST', 'https://jerseybuzzapp.herokuapp.com/webapi/user/post', true);
 		xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
 		xhr.onload = function() {
