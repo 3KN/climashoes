@@ -30,7 +30,8 @@ function getSteps(token){
 
 			if(event["status"] =="OK"){
 				
-				alert(event["dates"]);
+				var dates = JSON.parse(event["dates"]);
+				alert(dates);
 				
 			}else{
 				alert(event["errorValue"]);
