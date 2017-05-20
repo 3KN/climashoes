@@ -57,7 +57,7 @@ function signUp(){
 	
 		var obj = new Object();
 		obj.login = login;
-		obj.password  = password;
+		obj.password  = pass;
 		var jsonString= JSON.stringify(obj);
 	
 		var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
